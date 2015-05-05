@@ -40,190 +40,189 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section type=data-markdown>
+				<section data-markdown>
 					<script type="text/template">
-					# Prototyping GNOME UI for Gestural Input
-					
-					*Presented by* <br />
-					Adityo Pratomo <br />
-					Hidayat Febiansyah <br />
-					GNOME.Asia 2015
-					
-					---
-					
-					## User Input Devices
-					
-					Devices act as a medium for user to give input to computer
-					
-					---
-					
-					## Evolution of User Input Device
-					
-					Punch Card
-					
-					----
-					
-					Keyboard
-					
-					----
-					
-					Mouse
-					
-					----
-					
-					Scanner
-					
-					----
-					
-					Graphic Tablet
-					
-					----
-					
-					Touchscreen
-					
-					----
-					
-					Air Gesture Input 
-					
-					----
-					
-					Voice Input
-					
-					----
-					
-					Tangible User Interface
-					
-					---
-					
-					## Today's Condition
-					
-					Huge variety of input device
-					
-					----
-					
-					(Still) Follows the WIMP (Windows, Icon, Menu, Pointer) style
-					
-					----
-					
-					Windows
-					
-					----
-					
-					Icon
-					
-					----
-					
-					Menu
-					
-					----
-					
-					Pointer
-					
-					---
-					
-					## Gestural Input
-					
-					Provides gestures (mostly fingers') input for users
-					
-					----
-					
-					Touchpad
-					
-					----
-					
-					Implemented in many OS
-					
-					---
-					
-					## New Gestural Input Devices
-					
-					Introduces free form gestures as means to interact
-					
-					----
-					
-					Microsoft Kinect
-					
-					* Full body input, including voice
-					* No finger detection
-					
-					----
-					
-					Leap Motion
-					
-					* Fingers input only
-					* Have built-in finger gestures detection
-					
-					----
-					
-					Intel RealSense
-					
-					* Essentially a much smaller Kinect
-					* Windows only SDK
-					
-					----
-					
-					Generally speaking, hardware wise, these devices do their job well
-					
-					---
-					
-					## Problems
-					
-					Come from the software implementation of it
-					
-					----
-					
-					Metro UI 
-					
-					* Supposed to be designed for touch
-					* Falls flat for these kind of interaction
-					
-					----
-					
-					Kinect Guidelines
-					
-					* Still involves choosing and confirming action
-					* Chooses a big icon
-					* Confirms by hanging there for a period of time
-					
-					----
-					
-					Direct Mouse to Leap Motion
-					
-					* Barely usable since it involves high accuracy in picking object
-					* Lost in translation between 2D (where the feedback happens) and 3D (where the action happens)
-					
-					----
-					
-					OS Wise Problems
-					
-					* Information are structured inside tree, explored by moving down branches (nothing wrong with this)
-					* Interaction wise, requires picking up objects, confirming and working on that
-					
-					---
-					
-					## Motivation
-					
-					* To suggest a model for an OS-wide application of free gestures input
-					* We view this interaction model as something that's human and natural
-					* To push further research of this area, without waiting for big corp to do it (hooray Open Source)
-					
-					---
-					
-					## Design Consideration
-					
-					* Applied in Leap Motion
-					* Complementary to mouse and keyboard
-					* Can be used with only one hand
-					* Heavy on gesture use with minimal icon involved
-					
-					----
-					
-					## Previous Works
-					
-					----
-					
-					## Our Prototype
-					
+						# Prototyping GNOME UI for Gestural Input
+						
+						*Presented by* <br />
+						Adityo Pratomo <br />
+						Hidayat Febiansyah <br />
+						GNOME.Asia 2015
+						
+						---
+						
+						## User Input Devices
+						
+						Devices act as a medium for user to give input to computer
+						
+						---
+						
+						## Evolution of User Input Device
+						
+						Punch Card
+						
+						----
+						
+						Keyboard
+						
+						----
+						
+						Mouse
+						
+						----
+						
+						Scanner
+						
+						----
+						
+						Graphic Tablet
+						
+						----
+						
+						Touchscreen
+						
+						----
+						
+						Air Gesture Input 
+						
+						----
+						
+						Voice Input
+						
+						----
+						
+						Tangible User Interface
+						
+						---
+						
+						## Today's Condition
+						
+						Huge variety of input device
+						
+						----
+						
+						(Still) Follows the WIMP (Windows, Icon, Menu, Pointer) style
+						
+						----
+						
+						Windows
+						
+						----
+						
+						Icon
+						
+						----
+						
+						Menu
+						
+						----
+						
+						Pointer
+						
+						---
+						
+						## Gestural Input
+						
+						Provides gestures (mostly fingers') input for users
+						
+						----
+						
+						Touchpad
+						
+						----
+						
+						Implemented in many OS
+						
+						---
+						
+						## New Gestural Input Devices
+						
+						Introduces free form gestures as means to interact
+						
+						----
+						
+						Microsoft Kinect
+						
+						* Full body input, including voice
+						* No finger detection
+						
+						----
+						
+						Leap Motion
+						
+						* Fingers input only
+						* Have built-in finger gestures detection
+						
+						----
+						
+						Intel RealSense
+						
+						* Essentially a much smaller Kinect
+						* Windows only SDK
+						
+						----
+						
+						Generally speaking, hardware wise, these devices do their job well
+						
+						---
+						
+						## Problems
+						
+						Come from the software implementation of it
+						
+						----
+						
+						Metro UI 
+						
+						* Supposed to be designed for touch
+						* Falls flat for these kind of interaction
+						
+						----
+						
+						Kinect Guidelines
+						
+						* Still involves choosing and confirming action
+						* Chooses a big icon
+						* Confirms by hanging there for a period of time
+						
+						----
+						
+						Direct Mouse to Leap Motion
+						
+						* Barely usable since it involves high accuracy in picking object
+						* Lost in translation between 2D (where the feedback happens) and 3D (where the action happens)
+						
+						----
+						
+						OS Wise Problems
+						
+						* Information are structured inside tree, explored by moving down branches (nothing wrong with this)
+						* Interaction wise, requires picking up objects, confirming and working on that
+						
+						---
+						
+						## Motivation
+						
+						* To suggest a model for an OS-wide application of free gestures input
+						* We view this interaction model as something that's human and natural
+						* To push further research of this area, without waiting for big corp to do it (hooray Open Source)
+						
+						---
+						
+						## Design Consideration
+						
+						* Applied in Leap Motion
+						* Complementary to mouse and keyboard
+						* Can be used with only one hand
+						* Heavy on gesture use with minimal icon involved
+						
+						----
+						
+						## Previous Works
+						
+						----
+						
+						## Our Prototype
 					</script>
 				</section>
 				<section>
